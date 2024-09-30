@@ -1,5 +1,4 @@
-
-    public class LinkedList {
+public class LinkedList {
         private NewAccount head;  //head of the linked list ; head is the first node of the linked list
 
         public  LinkedList(){  this.head=null;    }     //constructor to create a new linked list ;
