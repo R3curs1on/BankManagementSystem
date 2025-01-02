@@ -58,9 +58,13 @@ Example Flow
     yaml
 
 enter name : JohnDoe
+
 enter password in number: 1234
+
 enter balance (Optional): 500
+
 Successfully created Account
+
 Account Number: XYZ123
 
 Logging in and Performing Operations:
