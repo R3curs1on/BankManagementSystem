@@ -1,9 +1,10 @@
 Bank Management System
 
 This is a simple console-based bank management system written in Java. The system allows users to create accounts, log in, check their balance, and perform credit and debit operations. It uses a LinkedList to store account information and allows for basic banking operations.
-Features
+Functionality
 
     Create Account: Users can create a new account by providing a name, password, and an optional initial balance.
+    Account Number is Unique and large
     Login to Account: Users can log in to their existing accounts using their account number and password.
     Account Operations: After logging in, users can perform the following operations:
         Check Balance: View the current balance of their account.
@@ -15,7 +16,7 @@ Features
 Getting Started
 Prerequisites
 
-    Java Development Kit (JDK): Ensure you have Java installed on your machine. You can download it here.
+    Java Development Kit (JDK): Ensure you have Java installed on your machine.
 
 Running the Program
 
@@ -40,7 +41,7 @@ Usage
 
     On running the program, you will be presented with the following options:
 
-    css
+    bash
 
     enter a choice :
     (1). Create Account
@@ -57,23 +58,23 @@ Example Flow
 
     yaml
 
-enter name : JohnDoe
+enter name : John Doe
 
-enter password in number: 1234
+enter password in number: 1234 
 
 enter balance (Optional): 500
 
 Successfully created Account
 
-Account Number: XYZ123
+Account Number: AC3512c523838ad93a12327ce8520bc86b66c1973f4d86b595114c33bbb59a032b
 
 Logging in and Performing Operations:
 
 
-    enter Account Number : XYZ123
+    enter Account Number : AC3512c523838ad93a12327ce8520bc86b66c1973f4d86b595114c33bbb59a032b
     enter password in Number : 1234
     Account exists
-    Welcome to your account, JohnDoe
+    Welcome to your account, John Doe
     enter a choice :
     (0). Delete Account
     (1). Check Balance
@@ -84,4 +85,7 @@ Logging in and Performing Operations:
 Code Structure
 
     Main.java: This is the main class that runs the program and handles user interactions.
-    Account Management: The account management logic, such as creating accounts, logging in, crediting, debiting, and deleting accounts, is handled via the Login and CreateAccount classes (to be implemented).
+    NewAccount.java : This class is like Node Class of linkedlist , its used for storing name ,acc_number ,balence ,passwd(hashed)
+    LinkedList.java : The actual linkedlist implementation ; this is where NewAccount.java objects (i mean Nodes ) are added,searched and deleted ; this class is used internally in account management 
+    Account Management: The account management logic, such as creating accounts, logging in, crediting, debiting, and deleting accounts, is handled via the Login and CreateAccount classes .
+    Hashutil.java : its SHA256 hashing class for creating unique account number and storing passwd as hash 
