@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dddd8cb5-11fb-4b7d-80f8-a8fba0e1e86f" name="Changes" comment="2nd Commit &#10;made account number more secure &#10;added HashUtil class to generate hash of given string &#10;used sha256 algo to generate acc number&#10;use name and totalAccount (newAccountToken) to generate sha256 ie acc number&#10;added hash functn to password &#10;password hash is stored in Node or NewAccount object &amp; while checking acc given pass is again hashed and hash values are checked">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +78,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Vedant S\IdeaProjects\BankManagementSystem" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -109,7 +115,8 @@
       <workItem from="1727693525629" duration="11000" />
       <workItem from="1727708950340" duration="1037000" />
       <workItem from="1728573253636" duration="623000" />
-      <workItem from="1729343031513" duration="720000" />
+      <workItem from="1729343031513" duration="1351000" />
+      <workItem from="1735829411883" duration="1727000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -173,6 +180,17 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="2nd Commit &#10;made account number more secure &#10;added HashUtil class to generate hash of given string &#10;used sha256 algo to generate acc number&#10;use name and totalAccount (newAccountToken) to generate sha256 ie acc number&#10;added hash functn to password &#10;password hash is stored in Node or NewAccount object &amp; while checking acc given pass is again hashed and hash values are checked" />
     <option name="LAST_COMMIT_MESSAGE" value="2nd Commit &#10;made account number more secure &#10;added HashUtil class to generate hash of given string &#10;used sha256 algo to generate acc number&#10;use name and totalAccount (newAccountToken) to generate sha256 ie acc number&#10;added hash functn to password &#10;password hash is stored in Node or NewAccount object &amp; while checking acc given pass is again hashed and hash values are checked" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

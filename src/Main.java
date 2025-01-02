@@ -13,12 +13,15 @@ import java.util.*;
 
 
             while (true) {
-                System.out.println("enter a choilce :\n(1).Create Account \n(2).Login \n(3).Exit");       int choice= sc.nextInt();
+                System.out.println("enter a choilce :\n(1).Create Account \n(2).Login \n(3).Exit");
+                int choice= sc.nextInt();
+                sc.nextLine();                          // a fix for the scanner bug ; it was not taking the next input (name) after nextInt
+
                 if (choice==3){ break;}            // Exit
 
                 else if (choice==1) {              // Create Account
-                    System.out.println("enter name : ");                      String name=sc.next();
-                    System.out.println("enter password in number: ");         int password=sc.nextInt();
+                    System.out.println("enter name : ");                      String name = sc.nextLine();
+                    System.out.println("enter password in number: ");         int password = sc.nextInt();
                     System.out.println("enter balence (Optional): ");         int balence=0 ; String amt =sc.next(); if (!amt.isEmpty()) balence+=Integer.parseInt(amt);
                     System.out.println("Successfully created Account ");      String AccountNumber;     //generates a unique account number ; value to it will be assigned in below code
 
