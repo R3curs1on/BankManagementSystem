@@ -22,18 +22,15 @@ Prerequisites
 Running the Program
 
     Clone the repository:
-
-`git clone https://github.com/R3curs1on/BankManagementSystem.git`
+    `git clone https://github.com/R3curs1on/BankManagementSystem.git`
 
 Compile the Java code:
-``
-javac Main.java
-``
 
+    `javac Main.java`
+    
 Run the program:
-``
-    java Main
-``
+
+    `java Main`
 
 Usage
 
@@ -52,12 +49,12 @@ Usage
 Example Flow
 
     Creating an Account:
-
-enter name : John Doe
-enter password in number: 1234 
-enter balance (Optional): 500
-Successfully created Account
-Account Number: AC3512c523838ad93a12327ce8520bc86b66c1973f4d86b595114c33bbb59a032b
+    
+    enter name : John Doe
+    enter password in number: 1234 
+    enter balance (Optional): 500
+    Successfully created Account
+    Account Number: AC3512c523838ad93a12327ce8520bc86b66c1973f4d86b595114c33bbb59a032b
 
 
 Logging in and Performing Operations:
