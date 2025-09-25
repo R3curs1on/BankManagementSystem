@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dddd8cb5-11fb-4b7d-80f8-a8fba0e1e86f" name="Changes" comment="2nd Commit &#10;made account number more secure &#10;added HashUtil class to generate hash of given string &#10;used sha256 algo to generate acc number&#10;use name and totalAccount (newAccountToken) to generate sha256 ie acc number&#10;added hash functn to password &#10;password hash is stored in Node or NewAccount object &amp; while checking acc given pass is again hashed and hash values are checked">
+    <list default="true" id="dddd8cb5-11fb-4b7d-80f8-a8fba0e1e86f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +28,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="newBranch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,7 +63,7 @@
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;newBranch&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Vedant S&quot;,
@@ -116,7 +115,9 @@
       <workItem from="1727708950340" duration="1037000" />
       <workItem from="1728573253636" duration="623000" />
       <workItem from="1729343031513" duration="1351000" />
-      <workItem from="1735829411883" duration="2451000" />
+      <workItem from="1735829411883" duration="3519000" />
+      <workItem from="1758205329960" duration="396000" />
+      <workItem from="1758219348947" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
