@@ -1,80 +1,98 @@
-Bank Management System
+# Bank Management System
 
-This is a simple console-based bank management system written in Java. The system allows users to create accounts, log in, check their balance, and perform credit and debit operations. It uses a LinkedList to store account information and allows for basic banking operations.
+Simple console-based bank management system in Java. Supports creating accounts, logging in, checking balances, crediting/debiting accounts, and deleting accounts. Accounts are stored in-memory (HashMap) and passwords are stored as SHA-256 hashes.
 
-Functionality : 
+## Features
+- Create account (name, numeric password, optional initial balance)
+- Login using account number + password
+- Check balance, credit (deposit), debit (withdraw)
+- Delete account
+- Account numbers are randomly generated and passwords are hashed using SHA-256
 
-    Create Account: Users can create a new account by providing a name, password, and an optional initial balance.
-    Login to Account: Users can log in to their existing accounts using their account number and password.
-    Account Operations: After logging in, users can perform the following operations:
-        Check Balance: View the current balance of their account.
-        Credit: Add money to their account.
-        Debit: Withdraw money from their account.
-        Delete Account: Delete their account permanently.
-    Exit: Users can exit the system at any time.
+## Prerequisites
+- Java Development Kit (JDK) 8+ installed
+- Basic command line knowledge or an IDE (IntelliJ IDEA, Eclipse)
 
-Getting Started
+## Build & Run (command line)
+From the repository root (project folder):
 
-Prerequisites
+1. Compile all sources:
+   Windows:
+   ```
+   javac -d out src\*.java
+   ```
+   Linux / macOS:
+   ```
+   javac -d out src/*.java
+   ```
 
-    Java Development Kit (JDK): Ensure you have Java installed on your machine.
+2. Run the program:
+   ```
+   java -cp out Main
+   ```
 
-Running the Program
+You can also open the project in your IDE and run the `Main` class.
 
-    Clone the repository:
-    `git clone https://github.com/R3curs1on/BankManagementSystem.git`
+## Usage (quick)
+On startup you will see the main menu:
+1. Create Account
+2. Login
+3. Exit
 
-Compile the Java code:
+Create account prompts:
+- name
+- password (minimum 4 characters)
+- initial balance (optional, non-negative number)
 
-    `javac Main.java`
-    
-Run the program:
+After creating an account you receive an account number (e.g., AC...).
 
-    `java Main`
+Login prompts:
+- Account Number
+- Password
 
-Usage
+Once logged in, account menu provides:
+- Check Balance
+- Credit (deposit)
+- Debit (withdraw)
+- Delete Account
+- Logout
 
-    On running the program, you will be presented with the following options:
+## Example flow
+Create account:
+- enter name: John Doe
+- enter password: 1234
+- enter initial balance: 500
+- Output: Successfully created Account! Your new Account Number is: AC...
 
+Login & operations:
+- enter Account Number: AC...
+- enter password: 1234
+- After login:
+  - (1) Check Balance → shows current balance
+  - (2) Credit → add funds
+  - (3) Debit → withdraw funds
+  - (4) Delete Account → removes account from memory
+  - (5) Logout → returns to main menu
 
-    enter a choice :
-    (1). Create Account
-    (2). Login
-    (3). Exit
+## Code structure
+- src/
+  - Main.java — main CLI and program flow
+  - NewAccount.java — account model (password hashed, balance handling)
+  - AccountMap.java — in-memory HashMap storage for accounts
+  - Login.java — authentication helper
+  - HashUtil.java — SHA-256 hashing helper
 
-    Follow the prompts to create an account or log in to an existing account.
+## Notes & limitations
+- Storage: accounts are stored in memory (HashMap). Closing the program clears all accounts. Persistent storage is not implemented.
+- Security: passwords are hashed with SHA-256, but this is a simple example — no salt and no secure password storage best practices are implemented.
+- Account numbers are generated using UUID and prefixed with `AC`.
 
-    After logging in, you can check your balance, perform credit or debit operations, or delete your account.
+## Contributing
+Improvements you might add:
+- Persistent storage (file or database)
+- Salted/strong password storage
+- Better input validation and UI
+- Unit tests and logging
 
-Example Flow
-
-    Creating an Account:
-    
-    enter name : John Doe
-    enter password in number: 1234 
-    enter balance (Optional): 500
-    Successfully created Account
-    Account Number: AC3512c523838ad93a12327ce8520bc86b66c1973f4d86b595114c33bbb59a032b
-
-
-Logging in and Performing Operations:
-
-
-    enter Account Number : AC3512c523838ad93a12327ce8520bc86b66c1973f4d86b595114c33bbb59a032b
-    enter password in Number : 1234
-    Account exists
-    Welcome to your account, John Doe
-    enter a choice :
-    (0). Delete Account
-    (1). Check Balance
-    (2). Credit
-    (3). Debit
-    (4). Exit
-
-Code Structure
-
-    Main.java: This is the main class that runs the program and handles user interactions.
-    NewAccount.java : This class is like Node Class of linkedlist , its used for storing name ,acc_number ,balence ,passwd(hashed)
-    LinkedList.java : The actual linkedlist implementation ; this is where NewAccount.java objects (i mean Nodes ) are added,searched and deleted ; this class is used internally in account management 
-    Account Management: The account management logic, such as creating accounts, logging in, crediting, debiting, and deleting accounts, is handled via the Login and CreateAccount classes .
-    Hashutil.java : its SHA256 hashing class for creating unique account number and storing passwd as hash 
+## License
+Use or modify as you wish. No license file included by default.
