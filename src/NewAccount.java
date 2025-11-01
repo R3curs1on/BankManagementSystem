@@ -1,24 +1,37 @@
+public class NewAccount {  // this class is used to create new account for the user ; value of key (in hashmap)
+    private final String accountNumber;  // unique account number for each user ; its key but in case we need to print it we can access it
+    private final String name;
+    private final String passwordHash;
+    private long balance;
 
+    public NewAccount(String name, String  password, long balance) {
+        if (name == null || name.isBlank())  throw new IllegalArgumentException("Name required");
+        if ( password.length() < 4) throw new IllegalArgumentException("Password too weak");
 
-public class NewAccount {   // This class is used to create a new account ; this is actually a node of the linked list
-        private String name;
-        private String AccountNumber;
-        private String Password;        //  in object pasword is stored in string format (hash)  ; but while making object of NewAccount we will pass the PIN  in int format
-        private int Balance;
-        NewAccount next;
-
-        public NewAccount( String name , int Password , String AccountNumber , int Balance){     //constructor to Create a new account Node
-            this.name=name;
-            this.AccountNumber=AccountNumber;
-            this.Password= (new HashUtil()).generateSHA256(String.valueOf(Password));                                 //Password;
-            this.Balance=Balance;
-            this.next=null;
-        }
-
-        public String displayAccountNumber(){ return AccountNumber; } // what is i removed public from here
-        public String displayName() {         return name;          }     // what is i removed public from here
-        public String displayPIN()     {         return Password;      }
-        public int displayBalace()  {         return Balance;       }
-
-        public void SetValue( int newValue){   Balance=newValue;     }
+        this.name = name;
+        this.passwordHash = HashUtil.generateSHA256(password);
+        this.balance = balance;
+        this.accountNumber = "AC" + java.util.UUID.randomUUID().toString().replace("-", "").substring(0, 12);
     }
+
+    public String getAccountNumber() { return accountNumber; }
+    public String getName() { return name; }
+           String getPasswordHash() { return passwordHash; }
+    public long getBalance() { return balance; }
+    public void setBalance(long balance) { this.balance = balance; }
+
+    public void credit(long amount) {
+        if (amount < 0) throw new IllegalArgumentException("Credit amount must be non-negative");
+        this.balance += amount;
+    }
+    public void debit(long amount) {
+        if (amount < 0) throw new IllegalArgumentException("Debit amount must be non-negative");
+        if (amount > this.balance) throw new IllegalArgumentException("Insufficient balance");
+        this.balance -= amount;
+    }
+
+    @Override
+    public String toString() {
+        return "NewAccount{name='" + name + "', balance=" + balance + "}";
+    }
+}
